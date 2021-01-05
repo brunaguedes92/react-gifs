@@ -2,9 +2,14 @@
 import React, { Component } from 'react';
 import SearchBar from './search_bar';
 import Gif from './gif';
+import GifList from './gif_list';
 
 class App extends Component {
   render() {
+    const gifs = [
+      { id: "gRrnVbl8GS6ekGnRvB" },
+      { id: "Zh79blBmyDfkYQLgQU" }
+    ];
     return (
       <div>
         <div className="left-scene">
@@ -13,7 +18,9 @@ class App extends Component {
             <Gif id="dqJu4SZcfKRuk3zBdR" />
           </div>
         </div>
-        <div className="right-scene" />
+        <div className="right-scene">
+          <GifList gifs={gifs} />
+        </div>
       </div>
     );
   }
